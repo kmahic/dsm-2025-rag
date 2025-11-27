@@ -16,6 +16,8 @@
 
 ## Re-ranking
 
+## Context compression
+
 # Evaluering (Groundedness, Correctness, R+P)
 
 # Praktisk
