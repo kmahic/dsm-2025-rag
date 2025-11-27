@@ -4,9 +4,9 @@
 
 ## Forskjellige modeller/Variasjon/dimensjonalitet
 
-# Retrieval
-
 ## Chunking strategies (Hierarkisk / Semantisk) 
+
+# Retrieval
 
 ## Søkestrategier (Hybridsøk, Query Expansion, Query Rewriting)
 
