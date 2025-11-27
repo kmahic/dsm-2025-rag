@@ -8,7 +8,7 @@
 
 # Retrieval
 
-## Søkestrategier (Hybridsøk, Query Expansion, Query Rewriting)
+## Søkestrategier (Hybridsøk, Query Expansion, Query Rewriting/HyDe)
 
 ## Metadata filters
 
