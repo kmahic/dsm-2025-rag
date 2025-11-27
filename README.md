@@ -1,24 +1,24 @@
-# Intro til RAG
+# Intro til RAG @Kenan
 
 # Pre-retrieval
 
-## Forskjellige modeller/Variasjon/dimensjonalitet
+## Forskjellige modeller/Variasjon/dimensjonalitet @Simen
 
-## Chunking strategies (Hierarkisk / Semantisk) 
+## Chunking strategies (Hierarkisk / Semantisk) @Stian
 
 # Retrieval
 
-## Søkestrategier (Hybridsøk, Query Expansion, Query Rewriting/HyDe)
+## Søkestrategier (Hybridsøk, Query Expansion, Query Rewriting/HyDe) @Kenan
 
-## Metadata filters
+## Metadata filters @Stian/Simen
 
 # Post-retrieval
 
-## Re-ranking
+## Re-ranking @Stian
 
-## Context compression
+## Context compression @Kenan
 
-# Evaluering (Groundedness, Correctness, R+P)
+# Evaluering (Groundedness, Correctness, R+P) @Stian
 
 # Praktisk
 
