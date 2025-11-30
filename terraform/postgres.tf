@@ -30,11 +30,23 @@ resource "google_sql_database" "vector_db" {
   instance = google_sql_database_instance.vector_db_instance.name
 }
 
+# Read postgres password from Secret Manager
+data "google_secret_manager_secret_version" "postgres_password" {
+  secret = var.postgres_password_secret_id
+}
+
+# Set password for the default postgres user
+resource "google_sql_user" "postgres_user" {
+  name     = "postgres"
+  instance = google_sql_database_instance.vector_db_instance.name
+  password = data.google_secret_manager_secret_version.postgres_password.secret_data
+}
+
 # Create a database user for the vector DB, using the password from Secret Manager
 resource "google_sql_user" "vector_db_user" {
   name     = var.vector_db_user_name
   instance = google_sql_database_instance.vector_db_instance.name
-  password = data.google_secret_manager_secret_version.db_password_secret.secret_data
+  password = data.google_secret_manager_secret_version.postgres_password.secret_data
 }
 
 # Enable pgvector extension in the vector_db database
@@ -44,6 +56,7 @@ resource "postgresql_extension" "pgvector" {
   database = google_sql_database.vector_db.name
 
   depends_on = [
-    google_sql_database.vector_db
+    google_sql_database.vector_db,
+    google_sql_user.postgres_user
   ]
 }

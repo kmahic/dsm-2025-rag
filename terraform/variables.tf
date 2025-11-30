@@ -27,3 +27,20 @@ variable "vector_db_user_name" {
   type        = string
   default     = "vector_db_user"
 }
+
+variable "postgres_password_secret_id" {
+  description = "The Secret Manager secret ID for postgres password"
+  type        = string
+  default     = "postgres-password"
+}
+
+variable "db_password_secret_id" {
+  description = "The Secret Manager secret ID for vector_db_user password"
+  type        = string
+  default     = "vector-db-password"
+}
+
+variable "tf_bucket_name" {
+  description = "Name of bucket storing Terraform state"
+  default     = "terraform-state-data-science-faggruppe-rag"
+}
