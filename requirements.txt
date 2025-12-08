@@ -19,6 +19,7 @@ sqlalchemy>=2.0.0
 
 # Utilities
 pandas>=2.0.0
+python-dotenv>=1.0.0
 
 # Embedding models
 sentence-transformers>=2.2.0
