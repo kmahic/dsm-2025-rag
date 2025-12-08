@@ -1,0 +1,20 @@
+{
+  "project_id": "data-science-faggruppe-rag",
+  "region": "europe-west1",
+  "db_config": {
+    "host": "35.205.154.230",
+    "database": "vector_db",
+    "user": "postgres"
+  },
+  "document": {
+    "name": "Dokumentavgift 2025",
+    "path": "../../data/dokumentavgift-2025.pdf",
+    "total_chunks": 84,
+    "text_length": 66598
+  },
+  "embeddings": {
+    "model": "text-multilingual-embedding-002",
+    "dimensions": 768
+  },
+  "chunks_in_db": true
+}
